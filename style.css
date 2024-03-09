@@ -1,0 +1,44 @@
+  :root {
+      /* Primary Colours */
+      --blue: hsl(223, 87%, 63%);
+      /* Secondary Colours */
+
+      --pale-blue     : hsl(223, 100%, 88%);
+      --light-red     : hsl(354, 100%, 66%);
+      /* Neutral Colours */
+      --gray          : hsl(0, 0%, 59%);
+      --very-dark-blue: hsl(209, 33%, 12%);
+
+      /* Base font-size */
+      font-size: 20px;
+  }
+
+  /* Initialization */
+  *,
+  ::before,
+  ::after {
+      margin    : 0;
+      padding   : 0;
+      box-sizing: border-box;
+  }
+
+  body {
+      align-items     : center;
+      background-color: white;
+      display         : flex;
+      flex-direction  : column;
+      font-family     : "Libre Franklin", sans-serif;
+      font-weight     : 300;
+      justify-content : center;
+      min-height      : 100vh;
+      min-width       : 100vw;
+  }
+
+  .attribution {
+      font-size : .9em;
+      text-align: center;
+  }
+
+  .attribution a {
+      color: var(--blue);
+  }
