@@ -49,7 +49,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Links
 
 - [Solution URL:](https://github.com/akmtasdikulislam/ping-coming-soon-page)
-- [Live Site URL:](https://your-live-site-url.com)
+- [Live Site URL:](https://akmtasdikulislam.github.io/ping-coming-soon-page/)
 
 ## My process
 
