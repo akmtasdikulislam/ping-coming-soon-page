@@ -31,12 +31,16 @@
       <p class="tagline">Subscribe and get notified</p>
     </section>
     <div class="email-subscription">
-      <input type="email" placeholder="Your email address..." />
+      <input
+        id="email-input"
+        type="email"
+        placeholder="Your email address..."
+      />
       <p id="invalid-error"><i> Please provide a valid email address </i></p>
       <p id="empty-error">
         <i>Whoops! It looks like you forgot to add your email</i>
       </p>
-      <input type="submit" value="Notify Me " />
+      <input id="submit-button" type="submit" value="Notify Me " />
     </div>
     <main>
       <img
@@ -57,5 +61,41 @@
       src="https://kit.fontawesome.com/8bd64be22c.js"
       crossorigin="anonymous"
     ></script>
+    <!-- Email input field validation -->
+    <script>
+      // Elements
+      const emailInputField = document.getElementById("email-input");
+      const submitButton = document.getElementById("submit-button");
+      // Error messages
+      const invalidEmailErrorMessage = document.getElementById("invalid-error");
+      const emptyEmailErrorMessage = document.getElementById("empty-error");
+      // Email validating Regular Expression
+      const emailValidationRegex =
+        /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+      // Adding CLICK event-handler on submit button
+      submitButton.addEventListener("click", () => {
+        // At first, removing all error messages
+        invalidEmailErrorMessage.style.display = "none";
+        emptyEmailErrorMessage.style.display = "none";
+        // And also removing input field error state (if it has any).
+        if (emailInputField.classList.contains("error")) {
+          emailInputField.classList.remove("error");
+        }
+        // Then validating the submition
+        if (emailInputField.value.length > 0) {
+          // If the email input filed is not empty, then check its validation
+          if (emailValidationRegex.test(emailInputField.value) == false) {
+            // If the email is not valid then, add error state to email input field and show *invalid* error message ("Please provide a valid email address").
+            emailInputField.classList.add("error");
+            invalidEmailErrorMessage.style.display = "block";
+          }
+        } else {
+          // If the email input field is empty, then error state to email input field and show *empty* error message ("Whoops! It looks like you forgot to add your email").
+          emailInputField.classList.add("error");
+          emptyEmailErrorMessage.style.display = "block";
+        }
+      });
+    </script>
   </body>
 </html>
