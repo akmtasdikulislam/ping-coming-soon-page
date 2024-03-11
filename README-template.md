@@ -21,7 +21,7 @@ This is a solution to the [Ping coming soon page challenge on Frontend Mentor](h
 ## Overview
 
 - Project start date: 09 March 2024
-- Project Duration:
+- Project Duration: 04 Hours
 
 ### The challenge
 

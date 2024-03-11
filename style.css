@@ -79,6 +79,7 @@
 
   .email-subscription input[type="email"]:focus {
       border-color: var(--blue);
+      color       : var(--blue);
   }
 
   .email-subscription p {
@@ -198,6 +199,10 @@
           font-size: .5em;
           left     : 5.75em;
           top      : 4.625em;
+      }
+
+      .email-subscription #empty-error {
+          left: 2.75em;
       }
 
       .email-subscription input.error~p+input[type="submit"] {
